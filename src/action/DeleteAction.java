@@ -1,5 +1,5 @@
 package action;
-// change?
+// change
 import mysqlcon.SqlCon;
 
 public class DeleteAction {
