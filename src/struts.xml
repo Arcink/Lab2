@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default"  extends="struts-default">
+        <action name="queryBookByName" class="action.QueryAction" method="queryTitle">
+            <result name="SUCCESS">/show_title.jsp</result>
+            <result name="FAIL">/book_error.jsp</result>
+        </action>
+         <action name="queryDetailByTitle" class="action.QueryAction" method="queryDetail">
+            <result name="SUCCESS">/show_detail.jsp</result>
+        </action>
+        <action name="deleteBook" class="action.DeleteAction" method="deleteBook">
+            <result name="SUCCESS">/operation_success.jsp</result>
+        </action>
+        <action name="backHome">
+            <result>/welcome.jsp</result>
+        </action>
+        <action name="updateRequirement" class="action.UpdateAction" method="updateRequirement">
+            <result name="SUCCESS">/book_update.jsp</result>
+        </action>
+        <action name="updateBook" class="action.UpdateAction" method="updateBook">
+            <result name="SUCCESS">/operation_success.jsp</result>
+            <result name="FAIL">/update_error.jsp</result>
+        </action>
+        <action name="queryAuthor" class="action.QueryAction" method="queryAuthor">
+            <result name="SUCCESS">/add_book.jsp</result>
+            <result name="FAIL">/add_author.jsp</result>
+        </action>
+        <action name="addAuthor" class="action.UpdateAction" method="addAuthor">
+            <result name="SUCCESS">/add_book.jsp</result>
+        </action>
+        <action name="addBook" class="action.UpdateAction" method="addBook">
+            <result name="SUCCESS">/operation_success.jsp</result>
+        </action>
+    </package>
+</struts>
